@@ -250,7 +250,7 @@ def consolidate_relationships_entities(relationships, kb, mode):
     df["Entity1_ID"] = df["Entity1"].apply(convert_name_to_kbid)
     df["Entity2_ID"] = df["Entity2"].apply(convert_name_to_kbid)
     print(df.head(100))
-    df.to_csv(f"conslidated_relationships.csv", index=False)
+    df.to_csv(f"consolidated_relationships.csv", index=False)
     print("Consolidated relationships and entities into consolidated_relationships.csv")
 
 

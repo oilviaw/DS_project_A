@@ -10,10 +10,16 @@ dependencies = [
     "networkx",
     "python-igraph",
     "matplotlib",
-    "en_core_web_lg"
+    "en_core_web_lg",
+    "igraph"
 
 ]
 
 [tool.uv.sources]
 en-core-web-sm = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_sm-3.8.0/en_core_web_sm-3.8.0.tar.gz" }
 en-core-web-lg = { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_lg-3.8.0/en_core_web_lg-3.8.0.tar.gz" }
+
+[tool.uv.workspace]
+members = [
+    "DS_PROJRCT_A",
+]

@@ -1,4 +1,4 @@
-Creator "igraph version 0.10.16 Fri Aug 15 15:57:31 2025"
+Creator "igraph version 0.10.16 Fri Aug 15 21:50:13 2025"
 Version 1
 graph
 [
@@ -253,13 +253,13 @@ graph
   [
     source 6
     target 2
-    relationship "daughters"
+    relationship "daughter"
   ]
   edge
   [
     source 7
     target 2
-    relationship "daughters"
+    relationship "daughter"
   ]
   edge
   [
@@ -307,7 +307,7 @@ graph
   [
     source 11
     target 4
-    relationship "daughters"
+    relationship "daughter"
   ]
   edge
   [
@@ -324,6 +324,12 @@ graph
   edge
   [
     source 7
+    target 6
+    relationship "mother"
+  ]
+  edge
+  [
+    source 11
     target 6
     relationship "mother"
   ]

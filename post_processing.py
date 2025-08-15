@@ -17,7 +17,7 @@ def load_names():
 # region process_data
 def process_data():
     # Load the CSV file into a DataFrame
-    df = pd.read_csv("conslidated_relationships.csv")
+    df = pd.read_csv("consolidated_relationships.csv")
 
     # First, drop rows with NaN values in Entity columns
     df = df.dropna(subset=["Entity1_ID", "Entity2_ID"])
@@ -126,9 +126,9 @@ def process_data():
 
     # Show relationship type distribution
     print(f"\nRelationship type count distribution:")
-    print(df_final["relationship_type_count"].value_counts().sort_index())
+    print(df_final[f"relationship_type_count"].value_counts().sort_index())
 
-    df_final.to_csv(f"relationships_with_counts.csv", index=False)
+    df_final.to_csv("relationships_with_counts.csv", index=False)
 
     # Create a separate summary table showing all relationship types for each pair
     relationship_pivot = df.pivot_table(
@@ -149,7 +149,7 @@ def process_data():
 def draw_graph():
     # Load the cleaned relationships data
     try:
-        df = pd.read_csv("./results/relationship_pivot_summary_by_chapter.csv")
+        df = pd.read_csv(f"relationship_pivot_summary.csv")
     except FileNotFoundError:
         print(
             "Error: 'relationships_with_counts.csv' not found. Please run process_data() first."
@@ -212,6 +212,7 @@ def draw_graph():
 
 
 if __name__ == "__main__":
-    draw_graph()
     process_data()
+    draw_graph()
+
 
